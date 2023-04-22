@@ -50,3 +50,4 @@ sed -i -e 's/fastapi==0.90.1/fastapi==0.89.1/g' /content/stable-diffusion-webui/
 mkdir /content/stable-diffusion-webui/extensions/deforum-for-automatic1111-webui/models
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' /content/stable-diffusion-webui/modules/shared.py
 
+# python launch.py --listen --xformers --enable-insecure-extension-access --theme dark --gradio-queue --multiple
