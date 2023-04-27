@@ -91,5 +91,3 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/sta
 
 sed -i -e '''/    prepare_environment()/a\    os.system\(f\"""sed -i -e ''\"s/dict()))/dict())).cuda()/g\"'' /workspace/stable-diffusion-webui/repositories/stable-diffusion-stability-ai/ldm/util.py""")''' /workspace/stable-diffusion-webui/launch.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' /workspace/stable-diffusion-webui/modules/shared.py
-
-# python launch.py --listen --xformers --enable-insecure-extension-access --theme dark --gradio-queue --multiple
