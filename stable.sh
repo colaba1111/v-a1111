@@ -9,7 +9,7 @@ wget https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build
 wget https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build/14795286/+files/libtcmalloc-minimal4_2.5-2.2ubuntu3_amd64.deb
 wget https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build/14795286/+files/libgoogle-perftools4_2.5-2.2ubuntu3_amd64.deb
 
-apt -y install ffmpeg libsm6 libxext6
+apt -y install ffmpeg libsm6 libxext6 libcairo2
 apt -y install -qq libunwind8-dev
 dpkg -i *.deb
 env LD_PRELOAD=libtcmalloc.so
