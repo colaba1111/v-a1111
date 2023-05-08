@@ -11,11 +11,12 @@ wget https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build
 
 apt -y install ffmpeg libsm6 libxext6 libcairo2
 apt -y install -qq libunwind8-dev
+apt -y install -qq  libcairo2-dev pkg-config python3-dev
 dpkg -i *.deb
 env LD_PRELOAD=libtcmalloc.so
 rm *.deb
-apt -y install -qq aria2
 
+apt -y install -qq aria2
 pip install -q torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 torchtext==0.14.1 torchdata==0.5.1 --extra-index-url https://download.pytorch.org/whl/cu116 -U
 pip install -q xformers==0.0.16 triton==2.0.0 -U
 
