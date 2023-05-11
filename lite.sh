@@ -38,12 +38,18 @@ git clone -b v2.1 https://github.com/camenduru/stable-diffusion-webui-rembg /wor
 git clone -b v2.1 https://github.com/camenduru/stable-diffusion-webui-two-shot /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-two-shot
 git clone -b v2.1 https://github.com/camenduru/sd_webui_stealth_pnginfo /workspace/stable-diffusion-webui/extensions/sd_webui_stealth_pnginfo
 
+git clone https://github.com/Coyote-A/ultimate-upscale-for-automatic1111.git /workspace/stable-diffusion-webui/extensions/ultimate-upscale-for-automatic1111
+git clone https://github.com/Extraltodeus/depthmap2mask.git /workspace/stable-diffusion-webui/extensions/depthmap2mask
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui-promptgen.git /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-promptgen
+git clone https://github.com/yankooliveira/sd-webui-photopea-embed.git /workspace/stable-diffusion-webui/extensions/sd-webui-photopea-embed
+
 cd /workspace/stable-diffusion-webui
 git reset --hard
 git -C /workspace/stable-diffusion-webui/repositories/stable-diffusion-stability-ai reset --hard
 
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/29461 -d /workspace/stable-diffusion-webui/models/Stable-diffusion -o realisticVisionV20_v13-inpainting.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors -d /workspace/stable-diffusion-webui/models/VAE -o vae-ft-mse-840000-ema-pruned.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/7935 -d /content/stable-diffusion-webui/models/Stable-diffusion -o URPMv1.3.inpainting.safetensors
 
 sed -i -e '''/    prepare_environment()/a\    os.system\(f\"""sed -i -e ''\"s/dict()))/dict())).cuda()/g\"'' /workspace/stable-diffusion-webui/repositories/stable-diffusion-stability-ai/ldm/util.py""")''' /workspace/stable-diffusion-webui/launch.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' /workspace/stable-diffusion-webui/modules/shared.py
