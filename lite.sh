@@ -16,6 +16,9 @@ dpkg -i *.deb
 env LD_PRELOAD=libtcmalloc.so
 rm *.deb
 
+apt -y install cmake
+pip install lit
+
 apt -y install -qq aria2
 pip install -q torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 torchtext==0.14.1 torchdata==0.5.1 --extra-index-url https://download.pytorch.org/whl/cu116 -U
 pip install -q xformers==0.0.16 triton==2.0.0 -U
@@ -47,7 +50,7 @@ cd /workspace/stable-diffusion-webui
 git reset --hard
 git -C /workspace/stable-diffusion-webui/repositories/stable-diffusion-stability-ai reset --hard
 
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/29461 -d /workspace/stable-diffusion-webui/models/Stable-diffusion -o realisticVisionV20_v13-inpainting.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/29461 -d /workspace/stable-diffusion-webui/models/Stable-diffusion -o realisticVisionV20_v20NoVAE-inpainting.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors -d /workspace/stable-diffusion-webui/models/VAE -o vae-ft-mse-840000-ema-pruned.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/7935 -d /content/stable-diffusion-webui/models/Stable-diffusion -o URPMv1.3.inpainting.safetensors
 
