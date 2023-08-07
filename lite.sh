@@ -46,7 +46,7 @@ cd /workspace/stable-diffusion-webui
 git reset --hard
 git -C /workspace/stable-diffusion-webui/repositories/stable-diffusion-stability-ai reset --hard
 
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/130072?type=Model&format=SafeTensor&size=full&fp=fp16 -d /content/stable-diffusion-webui/models/Stable-diffusion -o realisticVisionV51_v51VAE.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/130072?type=Model&format=SafeTensor&size=full&fp=fp16 -d /workspace/stable-diffusion-webui/models/Stable-diffusion -o realisticVisionV51_v51VAE.safetensors
 
 sed -i -e '''/from modules import launch_utils/a\import os''' /workspace/stable-diffusion-webui/launch.py
 sed -i -e '''/    prepare_environment()/a\    os.system\(f\"""sed -i -e ''\"s/dict()))/dict())).cuda()/g\"'' /workspace/stable-diffusion-webui/repositories/stable-diffusion-stability-ai/ldm/util.py""")''' /workspace/stable-diffusion-webui/launch.py
