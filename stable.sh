@@ -2,6 +2,7 @@
 
 cd /workspace
 env TF_CPP_MIN_LOG_LEVEL=1
+
 apt -y update -qq
 
 sudo apt install build-essential cmake -y -qq
@@ -23,19 +24,18 @@ git clone -b v2.4 https://github.com/camenduru/stable-diffusion-webui
 # git clone https://huggingface.co/embed/lora /workspace/stable-diffusion-webui/models/Lora/positive
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d /workspace/stable-diffusion-webui/models/ESRGAN -o 4x-UltraSharp.pth
 wget https://raw.githubusercontent.com/camenduru/stable-diffusion-webui-scripts/main/run_n_times.py -O /workspace/stable-diffusion-webui/scripts/run_n_times.py
-# git clone -b v2.4 https://github.com/camenduru/deforum-for-automatic1111-webui /workspace/stable-diffusion-webui/extensions/deforum-for-automatic1111-webui
-git clone -b v2.4 https://github.com/camenduru/stable-diffusion-webui-images-browser /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
-git clone -b v2.4 https://github.com/camenduru/stable-diffusion-webui-huggingface /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface
-git clone -b v2.4 https://github.com/camenduru/sd-civitai-browser /workspace/stable-diffusion-webui/extensions/sd-civitai-browser
-git clone -b v2.4 https://github.com/camenduru/sd-webui-additional-networks /workspace/stable-diffusion-webui/extensions/sd-webui-additional-networks
-git clone -b v2.4 https://github.com/camenduru/sd-webui-tunnels /workspace/stable-diffusion-webui/extensions/sd-webui-tunnels
-git clone -b v2.4 https://github.com/camenduru/batchlinks-webui /workspace/stable-diffusion-webui/extensions/batchlinks-webui
-git clone -b v2.4 https://github.com/camenduru/stable-diffusion-webui-catppuccin /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-catppuccin
-git clone -b v2.4 https://github.com/camenduru/a1111-sd-webui-locon /workspace/stable-diffusion-webui/extensions/a1111-sd-webui-locon
-git clone -b v2.4 https://github.com/camenduru/stable-diffusion-webui-rembg /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-rembg
-git clone -b v2.4 https://github.com/camenduru/stable-diffusion-webui-two-shot /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-two-shot
-git clone -b v2.4 https://github.com/camenduru/sd-webui-aspect-ratio-helper /workspace/stable-diffusion-webui/extensions/sd-webui-aspect-ratio-helper
-git clone -b v2.4 https://github.com/camenduru/asymmetric-tiling-sd-webui /workspace/stable-diffusion-webui/extensions/asymmetric-tiling-sd-webui
+git clone https://github.com/camenduru/stable-diffusion-webui-images-browser /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
+git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface
+git clone https://github.com/camenduru/sd-civitai-browser /workspace/stable-diffusion-webui/extensions/sd-civitai-browser
+git clone https://github.com/camenduru/sd-webui-additional-networks /workspace/stable-diffusion-webui/extensions/sd-webui-additional-networks
+git clone https://github.com/camenduru/sd-webui-tunnels /workspace/stable-diffusion-webui/extensions/sd-webui-tunnels
+git clone https://github.com/camenduru/batchlinks-webui /workspace/stable-diffusion-webui/extensions/batchlinks-webui
+git clone https://github.com/camenduru/stable-diffusion-webui-catppuccin /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-catppuccin
+git clone https://github.com/camenduru/a1111-sd-webui-locon /workspace/stable-diffusion-webui/extensions/a1111-sd-webui-locon
+git clone https://github.com/camenduru/stable-diffusion-webui-rembg /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-rembg
+git clone https://github.com/camenduru/stable-diffusion-webui-two-shot /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-two-shot
+git clone https://github.com/camenduru/sd-webui-aspect-ratio-helper /workspace/stable-diffusion-webui/extensions/sd-webui-aspect-ratio-helper
+git clone https://github.com/camenduru/asymmetric-tiling-sd-webui /workspace/stable-diffusion-webui/extensions/asymmetric-tiling-sd-webui
 
 git clone https://github.com/Mikubill/sd-webui-controlnet /workspace/stable-diffusion-webui/extensions/sd-webui-controlnet
 git clone https://github.com/fkunn1326/openpose-editor /workspace/stable-diffusion-webui/extensions/openpose-editor
@@ -45,9 +45,6 @@ git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor /workspace/
 
 
 git clone https://github.com/Coyote-A/ultimate-upscale-for-automatic1111.git /workspace/stable-diffusion-webui/extensions/ultimate-upscale-for-automatic1111
-git clone https://github.com/Extraltodeus/depthmap2mask.git /workspace/stable-diffusion-webui/extensions/depthmap2mask
-git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui-promptgen.git /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-promptgen
-git clone https://github.com/yankooliveira/sd-webui-photopea-embed.git /workspace/stable-diffusion-webui/extensions/sd-webui-photopea-embed
 
 cd /workspace/stable-diffusion-webui
 git reset --hard
@@ -96,7 +93,7 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckp
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/t2iadapter_zoedepth_sd15v1.pth -d /workspace/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o t2iadapter_zoedepth_sd15v1.pth
 
 
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/130072?type=Model&format=SafeTensor&size=full&fp=fp16 -d /workspace/stable-diffusion-webui/models/Stable-diffusion -o realisticVisionV51_v51VAE.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/SG161222/Realistic_Vision_V5.1_noVAE/resolve/main/Realistic_Vision_V5.1.safetensors?download=true -d /workspace/stable-diffusion-webui/models/Stable-diffusion -o realisticVisionV51_v51VAE.safetensors
 
 sed -i -e '''/from modules import launch_utils/a\import os''' /workspace/stable-diffusion-webui/launch.py
 sed -i -e '''/    prepare_environment()/a\    os.system\(f\"""sed -i -e ''\"s/dict()))/dict())).cuda()/g\"'' /workspace/stable-diffusion-webui/repositories/stable-diffusion-stability-ai/ldm/util.py""")''' /workspace/stable-diffusion-webui/launch.py
