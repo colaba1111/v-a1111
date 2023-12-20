@@ -96,6 +96,8 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/h94
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors -d /workspace/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-plus-face_sd15.safetensors
 
 pip install insightface==0.7.3
+pip install httpx==0.24.1
+
 
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/SG161222/Realistic_Vision_V5.1_noVAE/resolve/main/Realistic_Vision_V5.1.safetensors?download=true -d /workspace/stable-diffusion-webui/models/Stable-diffusion -o realisticVisionV51_v51VAE.safetensors
 
