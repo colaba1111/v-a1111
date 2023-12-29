@@ -23,6 +23,9 @@ pip install insightface==0.7.3
 # Install CLIP Interrogator
 git clone https://github.com/pharmapsychotic/clip-interrogator-ext.git ~/stable-diffusion-webui/extensions/clip-interrogator-ext
 
+# Install Upscaler
+git clone https://github.com/Coyote-A/ultimate-upscale-for-automatic1111.git ~/stable-diffusion-webui/extensions/ultimate-upscale-for-automatic1111
+
 # Download controlnet
 aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-full-face_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-full-face_sd15.safetensors
 aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-plus-face_sd15.safetensors
