@@ -2,8 +2,7 @@ sudo apt install build-essential aria2 -y
 sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0 -y
 
 # A1111
-# wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
-# bash websui.sh -f
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
 # Install Aspect Ratio Helper
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper.git ~/stable-diffusion-webui/extensions/sd-webui-aspect-ratio-helper
