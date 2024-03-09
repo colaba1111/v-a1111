@@ -49,7 +49,7 @@ aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-face
 
 # https://huggingface.co/InstantX/InstantID
 aria2c https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter_instant_id_sdxl.bin
-aria2c https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter_instant_id_sdxl.safetensors
+aria2c https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_instant_id_sdxl.safetensors
 
 aria2c https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny_fp16.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11p_sd15_canny_fp16.safetensors
 aria2c https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_lineart_fp16.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11p_sd15_lineart_fp16.safetensors
