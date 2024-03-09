@@ -26,11 +26,28 @@ git clone https://github.com/pharmapsychotic/clip-interrogator-ext.git ~/stable-
 # Install Upscaler
 git clone https://github.com/Coyote-A/ultimate-upscale-for-automatic1111.git ~/stable-diffusion-webui/extensions/ultimate-upscale-for-automatic1111
 
+# Install adetailer
+git clone https://github.com/Bing-su/adetailer.git ~/stable-diffusion-webui/extensions/adetailer
+
 # Download controlnet
-aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-full-face_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-full-face_sd15.safetensors
-aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-plus-face_sd15.safetensors
-aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-plus_sd15.safetensors
-aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter_sd15.safetensors
+# Newer models for faceid
+# aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-full-face_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-full-face_sd15.safetensors
+# aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-plus-face_sd15.safetensors
+# aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-plus_sd15.safetensors
+# aria2c https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter_sd15.safetensors
+
+# https://huggingface.co/h94/IP-Adapter-FaceID
+aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plus_sd15.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid-plus_sd15.bin
+aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sd15.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid_sd15.bin
+aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sd15.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid-plusv2_sd15.bin
+aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid-plusv2_sdxl.bin
+aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid_sdxl.bin
+aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-portrait_sd15.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid-portrait_sd15.bin
+
+# https://huggingface.co/InstantX/InstantID
+aria2c https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter_instant_id_sdxl.bin
+aria2c https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter_instant_id_sdxl.safetensors
+
 aria2c https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny_fp16.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11p_sd15_canny_fp16.safetensors
 aria2c https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_lineart_fp16.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11p_sd15_lineart_fp16.safetensors
 aria2c https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_mlsd_fp16.safetensors -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11p_sd15_mlsd_fp16.safetensors
