@@ -38,9 +38,12 @@ git clone https://github.com/Bing-su/adetailer.git ~/stable-diffusion-webui/exte
 
 # https://huggingface.co/h94/IP-Adapter-FaceID
 aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plus_sd15.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid-plus_sd15.bin
-aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sd15.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid_sd15.bin
+# ip-adapter-faceid-plus_sd15_lora.safetensors
 aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sd15.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid-plusv2_sd15.bin
+# ip-adapter-faceid-plusv2_sd15_lora.safetensors
 aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid-plusv2_sdxl.bin
+# ip-adapter-faceid-plusv2_sdxl_lora.safetensors
+aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sd15.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid_sd15.bin
 aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid_sdxl.bin
 aria2c https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-portrait_sd15.bin?download=true -d ~/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o ip-adapter-faceid-portrait_sd15.bin
 
