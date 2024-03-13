@@ -47,14 +47,14 @@ git clone https://github.com/ahgsql/StyleSelectorXL $EXTENSION_DIR/StyleSelector
 
 # IP-Adapter
 huggingface-cli download h94/IP-Adapter models/ip-adapter-plus-face_sd15.safetensors --local-dir $CONTROLNET_MODELS_DIR
-huggingface-cli download h94/IP-Adapter models/ip-adapter-plus_sd15.safetensors --local-dir $CONTROLNET_MODELS_DIR
-mv $CONTROLNET_MODELS_DIR/models $CONTROLNET_MODELS_DIR
+huggingface-cli download h94/IP-Adapter models/ip-adapter_sd15.safetensors --local-dir $CONTROLNET_MODELS_DIR
+mv $CONTROLNET_MODELS_DIR/models/* $CONTROLNET_MODELS_DIR
 rmdir $CONTROLNET_MODELS_DIR/models
 
 # IP-Adapter SDXL
 huggingface-cli download h94/IP-Adapter sdxl_models/ip-adapter-plus-face_sdxl_vit-h.safetensors --local-dir $CONTROLNET_MODELS_DIR
-huggingface-cli download h94/IP-Adapter sdxl_models/ip-adapter-plus_sdxl_vit-h.safetensors --local-dir $CONTROLNET_MODELS_DIR
-mv $CONTROLNET_MODELS_DIR/sdxl_models $CONTROLNET_MODELS_DIR
+huggingface-cli download h94/IP-Adapter sdxl_models/ip-adapter_sdxl_vit-h.safetensors --local-dir $CONTROLNET_MODELS_DIR
+mv $CONTROLNET_MODELS_DIR/sdxl_models/* $CONTROLNET_MODELS_DIR
 rmdir $CONTROLNET_MODELS_DIR/sdxl_models
 
 # IP-Adapter-FaceID
