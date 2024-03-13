@@ -3,8 +3,8 @@ STABLE_DIFFUSION_DIR=~/stable-diffusion-webui
 EXTENSION_DIR=$STABLE_DIFFUSION_DIR/extensions
 CONTROLNET_MODELS_DIR=$STABLE_DIFFUSION_DIR/extensions/sd-webui-controlnet/models
 DIFFUSION_MODELS_DIR=$STABLE_DIFFUSION_DIR/models/Stable-diffusion
-LORA_MODELS_DIR = $STABLE_DIFFUSION_DIR/models/Lora
-EMBEDDING_MODELS_DIR = $STABLE_DIFFUSION_DIR/models/Lora
+LORA_MODELS_DIR=$STABLE_DIFFUSION_DIR/models/Lora
+EMBEDDING_MODELS_DIR=$STABLE_DIFFUSION_DIR/models/Lora
 
 # Dependencies
 sudo apt install build-essential aria2 -y
