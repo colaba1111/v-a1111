@@ -72,7 +72,7 @@ huggingface-cli download lllyasviel/ControlNet-v1-1 --include *.pth *.yaml --loc
 huggingface-cli download CrucibleAI/ControlNetMediaPipeFace control_v2p_sd15_mediapipe_face.safetensors control_v2p_sd15_mediapipe_face.yaml --local-dir $CONTROLNET_MODELS_DIR
 
 # Model
-aria2c https://civitai.com/api/download/models/130072?type=Model&format=SafeTensor&size=pruned&fp=fp16 -d $DIFFUSION_MODELS_DIR -o realisticVisionV51_v51VAE.safetensors
+aria2c "https://civitai.com/api/download/models/130072?type=Model&format=SafeTensor&size=pruned&fp=fp16" -d $DIFFUSION_MODELS_DIR -o realisticVisionV51_v51VAE.safetensors
 
 # Texual Inversion
 # TODO
